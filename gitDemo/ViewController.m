@@ -16,6 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UILabel *helloLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 50, 200, 40)];
+    helloLabel.text = @"Hello World";
+    
+    [self.view addSubview:helloLabel];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
