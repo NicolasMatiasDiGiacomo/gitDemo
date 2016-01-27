@@ -20,6 +20,16 @@
     helloLabel.text = @"Hello World";
     helloLabel.textColor = [UIColor redColor];
     helloLabel.textAlignment = NSTextAlignmentCenter;
+    [UIView transitionWithView:helloLabel duration:0.5f options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        helloLabel.center = CGPointMake(arc4random()%(int)[UIScreen mainScreen].bounds.size.width-50, arc4random()%(int)[UIScreen mainScreen].bounds.size.height-50);
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.5f animations:^{
+            helloLabel.alpha = 1;
+        }];
+        [UIView animateWithDuration:0.5f animations:^{
+            helloLabel.alpha = 0;
+        }];
+    }];
     [self.view addSubview:helloLabel];
     // Do any additional setup after loading the view, typically from a nib.
 }
