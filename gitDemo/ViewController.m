@@ -22,7 +22,11 @@
     helloLabel.textAlignment = NSTextAlignmentCenter;
     [UIView transitionWithView:helloLabel duration:0.5f options:UIViewAnimationOptionCurveEaseInOut animations:^{
         helloLabel.center = CGPointMake(arc4random()%(int)[UIScreen mainScreen].bounds.size.width-50, arc4random()%(int)[UIScreen mainScreen].bounds.size.height-50);
+        helloLabel.transform = CGAffineTransformMakeScale(1.5,1.5);
     } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.5f animations:^{
+            helloLabel.transform = CGAffineTransformIdentity;
+        }];
         [UIView animateWithDuration:0.5f animations:^{
             helloLabel.alpha = 1;
         }];
