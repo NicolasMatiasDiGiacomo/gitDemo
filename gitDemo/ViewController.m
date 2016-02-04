@@ -12,8 +12,6 @@
 
 @end
 
-//cambio
-
 @implementation ViewController
 
 - (void)viewDidLoad {
