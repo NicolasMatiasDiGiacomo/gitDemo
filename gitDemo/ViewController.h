@@ -10,6 +10,8 @@
 
 @interface ViewController : UIViewController
 
+@property (weak) UILabel *helloWorldLabel;
 
+-(void)moveLabel;
 @end
 
